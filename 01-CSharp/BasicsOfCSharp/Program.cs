@@ -12,9 +12,18 @@ namespace BasicsOfCSharp
         static string name = "";
         static void Main(string[] args)
         {
-            Console.Write("Please enter your name ");
+            /*Console.Write("Please enter your name ");
             name = Console.ReadLine();
-            Console.WriteLine("Hello " + name);
+            Console.WriteLine("Hello " + name);*/
+
+            Employee emp = new Employee();
+            emp.firstName = "Carol";
+            emp.lastName = "Baxtor";
+            emp.ssn = "123456789";
+            emp.Age = 40;
+            emp.salary = 10000.0M;
+
+            emp.GetDetails();
         }
     }
 }
