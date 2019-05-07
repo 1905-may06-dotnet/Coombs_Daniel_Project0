@@ -16,14 +16,17 @@ namespace BasicsOfCSharp
             name = Console.ReadLine();
             Console.WriteLine("Hello " + name);*/
 
-            Employee emp = new Employee();
-            emp.firstName = "Carol";
-            emp.lastName = "Baxtor";
-            emp.ssn = "123456789";
-            emp.Age = 40;
-            emp.salary = 10000.0M;
-
-            emp.GetDetails();
+            Employee emp = new Employee(); //default constructor
+            // emp.firstName = "Carol";
+            // emp.lastName = "Baxtor";
+            // emp.ssn = "123456789";
+            // emp.Age = 40;
+            // emp.salary = 10000.0M;
+            // emp.ishuman = false; //cannot be re-assigned
+            // emp.GetDetails();
+            Employee emp2 = new Employee("Palmer", "Calgoris", "hjhjk45", 27, 8500.00M);
+            emp._salary = 8563.23M;
+            Console.Write($"The Salary is {emp._salary}");
         }
     }
 }
