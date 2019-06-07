@@ -1,0 +1,126 @@
+﻿@model PizzaBoxClient.Models.OrderModel
+
+@{
+    Layout = "_LayoutAfter";
+    ViewData["Title"] = "PlaceOrder";
+}
+
+<h1>Place Order</h1>
+
+<hr />
+@ViewData["Text"]
+<div class="row">
+    <form asp-action="PlaceOrder">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <h4>Location</h4>
+            @Html.DropDownList("Location", new List<SelectListItem> {
+            new SelectListItem { Text = "Arlington", Value = "1", Selected = true },
+            new SelectListItem { Text = "Dallas", Value = "2", Selected = false },
+            new SelectListItem {Text = "Fort Worth", Value = "3", Selected = false},
+            new SelectListItem {Text = "Houston", Value = "4", Selected = false},
+            new SelectListItem {Text = "Austin", Value = "5", Selected = false},
+            })
+        </div>
+        <div class="form-group">
+            <h4>Size</h4>
+            @Html.DropDownList("Size", new List<SelectListItem> {
+            new SelectListItem { Text = "Small", Value = "Small", Selected = true },
+            new SelectListItem { Text = "Medium", Value = "Medium", Selected = false },
+            new SelectListItem { Text = "Large", Value = "Large", Selected = false },
+            new SelectListItem { Text = "Extra Large", Value = "Extra Large", Selected = false },
+            })
+        </div>
+        <div class="form-group">
+            <h4>Crust</h4>
+            @Html.DropDownList("Crust", new List<SelectListItem> {
+            new SelectListItem { Text = "Hand-Tossed", Value = "Hand-Tossed", Selected = true },
+            new SelectListItem { Text = "Thin", Value = "Thin", Selected = false },
+            new SelectListItem { Text = "Pan", Value = "Pan", Selected = false },
+            new SelectListItem { Text = "Thick", Value = "Thick", Selected = false },
+            new SelectListItem { Text = "Stuffed", Value = "Stuffed", Selected = false },
+            })
+        </div>
+        <div class="form-group">
+            <h4>Topping 1</h4>
+            @Html.DropDownList("Topping1", new List<SelectListItem> {
+            new SelectListItem { Text = "Pepperoni", Value = "Pepperoni", Selected = true },
+            new SelectListItem { Text = "Sausage", Value = "Sausage", Selected = false },
+            new SelectListItem { Text = "Bacon", Value = "Bacon", Selected = false },
+            new SelectListItem { Text = "Pineapple", Value = "Pineapple", Selected = false },
+            new SelectListItem { Text = "Mushrooms", Value = "Mushrooms", Selected = false },
+            new SelectListItem { Text = "Onions", Value = "Onions", Selected = false },
+            new SelectListItem { Text = "Extra Cheese", Value = "Extra Cheese", Selected = false },
+            new SelectListItem { Text = "Olives", Value = "Olives", Selected = false },
+            })
+        </div>
+        <div class="form-group">
+            <h4>Topping 2</h4>
+            @Html.DropDownList("Topping2", new List<SelectListItem> {
+            new SelectListItem { Text = "Pepperoni", Value = "Pepperoni", Selected = false },
+            new SelectListItem { Text = "Sausage", Value = "Sausage", Selected = true },
+            new SelectListItem { Text = "Bacon", Value = "Bacon", Selected = false },
+            new SelectListItem { Text = "Pineapple", Value = "Pineapple", Selected = false },
+            new SelectListItem { Text = "Mushrooms", Value = "Mushrooms", Selected = false },
+            new SelectListItem { Text = "Onions", Value = "Onions", Selected = false },
+            new SelectListItem { Text = "Extra Cheese", Value = "Extra Cheese", Selected = false },
+            new SelectListItem { Text = "Olives", Value = "Olives", Selected = false },
+            })
+        </div>
+        <div class="form-group">
+            <h4>Topping 3</h4>
+            @Html.DropDownList("Topping3", new List<SelectListItem> {
+            new SelectListItem { Text = "Pepperoni", Value = "Pepperoni", Selected = false },
+            new SelectListItem { Text = "Sausage", Value = "Sausage", Selected = false },
+            new SelectListItem { Text = "Bacon", Value = "Bacon", Selected = false },
+            new SelectListItem { Text = "Pineapple", Value = "Pineapple", Selected = false },
+            new SelectListItem { Text = "Mushrooms", Value = "Mushrooms", Selected = false },
+            new SelectListItem { Text = "Onions", Value = "Onions", Selected = false },
+            new SelectListItem { Text = "Extra Cheese", Value = "Extra Cheese", Selected = false },
+            new SelectListItem { Text = "Olives", Value = "Olives", Selected = false },
+            }, "")
+        </div>
+        <div class="form-group">
+            <h4>Topping 4</h4>
+            @Html.DropDownList("Topping4", new List<SelectListItem> {
+            new SelectListItem { Text = "Pepperoni", Value = "Pepperoni", Selected = false },
+            new SelectListItem { Text = "Sausage", Value = "Sausage", Selected = false },
+            new SelectListItem { Text = "Bacon", Value = "Bacon", Selected = false },
+            new SelectListItem { Text = "Pineapple", Value = "Pineapple", Selected = false },
+            new SelectListItem { Text = "Mushrooms", Value = "Mushrooms", Selected = false },
+            new SelectListItem { Text = "Onions", Value = "Onions", Selected = false },
+            new SelectListItem { Text = "Extra Cheese", Value = "Extra Cheese", Selected = false },
+            new SelectListItem { Text = "Olives", Value = "Olives", Selected = false },
+            }, "")
+        </div>
+        <div class="form-group">
+            <h4>Topping 5</h4>
+            @Html.DropDownList("Topping5", new List<SelectListItem> {
+            new SelectListItem { Text = "Pepperoni", Value = "Pepperoni", Selected = false },
+            new SelectListItem { Text = "Sausage", Value = "Sausage", Selected = false },
+            new SelectListItem { Text = "Bacon", Value = "Bacon", Selected = false },
+            new SelectListItem { Text = "Pineapple", Value = "Pineapple", Selected = false },
+            new SelectListItem { Text = "Mushrooms", Value = "Mushrooms", Selected = false },
+            new SelectListItem { Text = "Onions", Value = "Onions", Selected = false },
+            new SelectListItem { Text = "Extra Cheese", Value = "Extra Cheese", Selected = false },
+            new SelectListItem { Text = "Olives", Value = "Olives", Selected = false },
+            }, "")
+        </div>
+        <div class="form-group">
+            <label asp-for="Qty" class="control-label">Quantity</label>
+            <input asp-for="Qty" class="form-control" min="1" max="100" placeholder="1"/>
+            <span asp-validation-for="Qty" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Locations">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

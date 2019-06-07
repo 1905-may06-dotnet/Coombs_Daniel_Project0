@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PizzaBoxClient.Models.OrderModel>
+
+@{
+    Layout = "_LayoutAfter";
+    ViewData["Title"] = "ConfirmOrder";
+}
+
+<h1>Please Confirm Your Order</h1>
+
+<hr />
+
+<h5>@ViewBag.OrderToConfirm1</h5>
+<h5>@ViewBag.OrderToConfirm2</h5>
+<h5>@ViewBag.OrderToConfirm3</h5>
+
+<form asp-action="ConfirmOrder">
+    <div class="form-group">
+        <input type="submit" value="Confirm" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+   <a asp-action="Locations">Cancel Order</a>
+</div>
